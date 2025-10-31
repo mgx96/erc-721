@@ -1,7 +1,7 @@
 {
   "name": "Pet NFT #0",
   "description": "A loyal blue-eyed husky from the PetNFT collection.",
-  "image": "ipfs://QmbVtMqzmHpcdnxC6dHBPQmjqt7S5AKsuBXdsfsrgv4xnF",
+  "image": "https://ipfs.io/ipfs/QmbVtMqzmHpcdnxC6dHBPQmjqt7S5AKsuBXdsfsrgv4xnF",
   "attributes": [
     { "trait_type": "Fur", "value": "Gray and White" },
     { "trait_type": "Eyes", "value": "Blue" },

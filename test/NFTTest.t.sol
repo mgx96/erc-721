@@ -9,7 +9,7 @@ contract NFTTest is Test {
     NFT public nft;
     DeployNFT public deployer;
     address public USER = makeAddr("user");
-    string public constant PET_COLLECTION = "ipfs://QmbL6Qd1435L4Yc2WR1rufRLDMoQL5XQbDXRoQQhhohmoQ";
+    string public constant PET_COLLECTION = "https://ipfs.io/ipfs/QmWfGpfUCSGPAjCrZw5kWHjVBcNkRrAgz6fragHmXJNE8B";
 
     function setUp() public {
         deployer = new DeployNFT();
