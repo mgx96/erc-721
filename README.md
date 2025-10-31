@@ -1,66 +1,71 @@
-## Foundry
+![Solidity](https://img.shields.io/badge/Solidity-0.8.30-blue) ![Foundry](https://img.shields.io/badge/Framework-Foundry-%23E9573F) ![OpenZeppelin](https://img.shields.io/badge/OpenZeppelin-Contracts-green) ![License](https://img.shields.io/badge/License-MIT-yellow) ![Network](https://img.shields.io/badge/Deployed%20on-Sepolia%20Testnet-orange)
+# 🐾 Husky NFT Collection
+**Husky NFT** is an ERC-721 collection deployed on the Sepolia test network. Each token represents a unique, loyal husky from the *PetNFT* series, fully stored on IPFS for immutable metadata and decentralized image hosting. The project demonstrates clean NFT architecture, Foundry automation, and IPFS-integrated asset management.
+---
+## Overview
+- **Contract Name:** `NFT`
+- **Symbol:** `HSKY`
+- **Standard:** ERC-721 (OpenZeppelin)
+- **Language:** Solidity `^0.8.0`
+- **Framework:** Foundry
+- **Network:** Sepolia Testnet
+- **Storage:** IPFS (metadata + media)
+---
+## Features
+- `_safeMint` prevents NFTs from being lost on incompatible contracts  
+- On-chain metadata mapping for each token  
+- Full IPFS integration for decentralized hosting  
+- Automated deployment and minting via Foundry scripts  
+- Makefile for quick environment setup and network management
+---
+## Project Structure
+lib/ → Dependencies (OpenZeppelin, Forge Std, DevOps Tools)  
+script/ → Deployment and interaction scripts  
+ ├── DeployNFT.s.sol → Deploys the contract  
+ └── Interactions.s.sol → Mints new NFTs  
+src/ → Core smart contracts  
+ └── NFT.sol → ERC-721 contract  
+test/ → (Optional) Unit tests  
+foundry.toml → Foundry configuration  
+Makefile → Automation commands  
+.env → Environment variables (RPC URLs, keys)
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+---
+## Deployment & Minting
+### 1️⃣ Environment Setup  
+Create a `.env` file with:  
+`SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/YOUR_KEY`  
+`PRIVATE_KEY=YOUR_PRIVATE_KEY`  
+`ETHERSCAN_API_KEY=YOUR_ETHERSCAN_KEY`  
+### 2️⃣ Deploy the Contract  
+`make deploy ARGS="--network sepolia"`  
+### 3️⃣ Mint an NFT  
+`make mint ARGS="--network sepolia"`  
+The mint script automatically detects the latest deployment and mints a new NFT with the given IPFS metadata.
 
-Foundry consists of:
+---
+## Example Metadata (IPFS)
+    {
+      "name": "Pet NFT #0",
+      "description": "A loyal blue-eyed husky from the PetNFT collection.",
+      "image": "https://ipfs.io/ipfs/QmbVtMqzmHpcdnxC6dHBPQmjqt7S5AKsuBXdsfsrgv4xnF",
+      "attributes": [
+        { "trait_type": "Fur", "value": "Gray and White" },
+        { "trait_type": "Eyes", "value": "Blue" },
+        { "trait_type": "Mood", "value": "Playful" }
+      ]
+    }
+---
+## Resources
+- [OpenZeppelin Contracts](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [Foundry Documentation](https://book.getfoundry.sh/)
+- [IPFS Documentation](https://docs.ipfs.tech/)
+---
+## License
+MIT
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+--- 
+## Deployment
 
-## Documentation
+**Deployed on:** Sepolia Testnet [(View on Etherscan)](https://sepolia.etherscan.io/address/0xd24445002233fcd122ed44c66186cf59b512a2aa)   
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
