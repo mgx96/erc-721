@@ -66,7 +66,7 @@ The mint script automatically detects the latest deployment and mints a new NFT 
 MIT
 
 --- 
-## Deployment
+## Status
 
 **Deployed on:** Sepolia Testnet [(View on Etherscan)](https://sepolia.etherscan.io/address/0xd24445002233fcd122ed44c66186cf59b512a2aa)   
 
