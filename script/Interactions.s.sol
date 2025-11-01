@@ -4,7 +4,6 @@ pragma solidity ^0.8.0;
 import {Script} from "forge-std/Script.sol";
 import {NFT} from "../src/NFT.sol";
 
-
 contract mintNFT is Script {
     string public constant PET_COLLECTION = "https://ipfs.io/ipfs/QmWfGpfUCSGPAjCrZw5kWHjVBcNkRrAgz6fragHmXJNE8B";
 
