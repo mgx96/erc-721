@@ -20,6 +20,7 @@
 - Makefile for quick environment setup and network management
 ---
 ## Project Structure
+```
 lib/ → Dependencies (OpenZeppelin, Forge Std, DevOps Tools)  
 script/ → Deployment and interaction scripts  
  ├── DeployNFT.s.sol → Deploys the contract  
@@ -30,6 +31,7 @@ test/ → (Optional) Unit tests
 foundry.toml → Foundry configuration  
 Makefile → Automation commands  
 .env → Environment variables (RPC URLs, keys)
+```
 
 ---
 ## Deployment & Minting
