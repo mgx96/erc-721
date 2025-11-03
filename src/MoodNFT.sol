@@ -5,6 +5,8 @@ import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
 
 contract MoodNFT is ERC721 {
+    error MoodNFT__NotAuthorized();
+
     uint256 private s_tokenCounter;
     string private s_bowtieSvg;
     string private s_stareSvg;
@@ -29,6 +31,18 @@ contract MoodNFT is ERC721 {
     function mintNFT() public {
         _safeMint(msg.sender, s_tokenCounter);
         s_tokenCounter++;
+    }
+
+    function flipPose(uint256 tokenId) public {
+        address owner = ownerOf(tokenId);
+        if (!_isAuthorized(owner, msg.sender, tokenId)) {
+            revert MoodNFT__NotAuthorized();
+        }
+        if (s_tokenIdToMood[tokenId] == Mood.BOWTIE) {
+            s_tokenIdToMood[tokenId] = Mood.STARE;
+        } else {
+            s_tokenIdToMood[tokenId] = Mood.BOWTIE;
+        }
     }
 
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
