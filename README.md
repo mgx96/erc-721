@@ -18,20 +18,6 @@
 - Full IPFS integration for decentralized hosting  
 - Automated deployment and minting via Foundry scripts  
 - Makefile for quick environment setup and network management
----
-## Project Structure
-```
-lib/ → Dependencies (OpenZeppelin, Forge Std, DevOps Tools)  
-script/ → Deployment and interaction scripts  
- ├── DeployNFT.s.sol → Deploys the contract  
- └── Interactions.s.sol → Mints new NFTs  
-src/ → Core smart contracts  
- └── NFT.sol → ERC-721 contract  
-test/ → (Optional) Unit tests  
-foundry.toml → Foundry configuration  
-Makefile → Automation commands  
-.env → Environment variables (RPC URLs, keys)
-```
 
 ---
 ## Deployment & Minting
