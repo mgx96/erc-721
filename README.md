@@ -1,5 +1,5 @@
 ![Solidity](https://img.shields.io/badge/Solidity-0.8.30-blue) ![Foundry](https://img.shields.io/badge/Framework-Foundry-%23E9573F) ![OpenZeppelin](https://img.shields.io/badge/OpenZeppelin-Contracts-green) ![License](https://img.shields.io/badge/License-MIT-yellow) ![Network](https://img.shields.io/badge/Deployed%20on-Sepolia%20Testnet-orange)
-# 🐾 Husky NFT Collection
+## Husky NFT Collection
 **Husky NFT** is an ERC-721 collection deployed on the Sepolia test network. Each token represents a unique, loyal husky from the *PetNFT* series, fully stored on IPFS for immutable metadata and decentralized image hosting. The project demonstrates clean NFT architecture, Foundry automation, and IPFS-integrated asset management.
 
 ---
@@ -18,18 +18,6 @@
 - Full IPFS integration for decentralized hosting  
 - Automated deployment and minting via Foundry scripts  
 - Makefile for quick environment setup and network management
----
-## Project Structure
-lib/ → Dependencies (OpenZeppelin, Forge Std, DevOps Tools)  
-script/ → Deployment and interaction scripts  
- ├── DeployNFT.s.sol → Deploys the contract  
- └── Interactions.s.sol → Mints new NFTs  
-src/ → Core smart contracts  
- └── NFT.sol → ERC-721 contract  
-test/ → (Optional) Unit tests  
-foundry.toml → Foundry configuration  
-Makefile → Automation commands  
-.env → Environment variables (RPC URLs, keys)
 
 ---
 ## Deployment & Minting
