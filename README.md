@@ -10,7 +10,7 @@
 - **Language:** Solidity `^0.8.0`
 - **Framework:** Foundry
 - **Network:** Sepolia Testnet
-- **Storage:** IPFS (metadata + media)
+- **Storage:** IPFS
 ---
 ## Features
 - `_safeMint` prevents NFTs from being lost on incompatible contracts  
